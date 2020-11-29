@@ -9,10 +9,9 @@ function skaiciuKiekis(skaiciuSarasas) {
 
     for (let i = 0; i < skaiciuSarasas.length; i++) {
         const skaicius = skaiciuSarasas[i];
-        if (typeof skaicius !== 'number') {
-            continue;
+        if (arNormalusSkaicius(skaicius, 'skaicius')) {
+            kiekis++;
         }
-        kiekis++;
     }
     if (!arNormalusSkaicius(kiekis, 'kiekio rezultatas')) {
         return false;

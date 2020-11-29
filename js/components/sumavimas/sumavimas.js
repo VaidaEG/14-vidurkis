@@ -6,11 +6,10 @@ function sarasoSuma(skaiciuSarasas) {
     }
     let suma = 0;
 
-    for (let i=0; i < skaiciuSarasas.length; i++) {
+    for (let i = 0; i < skaiciuSarasas.length; i++) {
         const skaicius = skaiciuSarasas[i];
 
-        if (typeof skaicius !== 'number') {
-            console.warn('WARNING: skaičių sąraše rasta ne skaičiaus tipo reikšmė.');
+        if (!arNormalusSkaicius(skaicius, 'skaicius')) {
             continue;
         }
 
